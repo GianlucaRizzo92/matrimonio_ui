@@ -78,7 +78,7 @@ export default {
         note: this.note,
       };
       try {
-        axios.post('https://matrimonio-next.vercel.app/api/form', formData)
+        axios.post('/api/form', formData)
       } catch (error) {
         console.log(error);
       }
