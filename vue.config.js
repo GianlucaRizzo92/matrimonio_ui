@@ -2,7 +2,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
-        target: 'https://matrimonio-omega.vercel.app',
+        target: 'https://matrimonio-next.vercel.app/api/form',
         changeOrigin: true
       }
     }
