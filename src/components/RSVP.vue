@@ -6,7 +6,7 @@
       <div class="row mx-0 justify-content-center">
 
         <div class="col-md-7 col-lg-5 px-lg-2 col-xl-4 px-xl-0 card">
-          <form class="w-100 rounded p-4 text-dark" @submit="submitForm">
+          <form class="w-100 rounded p-4 text-dark" @submit.prevent="submitForm">
             <label class="d-block mb-4">
               <span class="d-block mb-2 text-black">Nome</span>
               <input name="name" type="text" class="form-control border-secondary bg-transparent text-light"
@@ -69,28 +69,32 @@ export default {
     },
   },
   methods: {
-    submitForm() {
-
+    async submitForm() {
       const formData = {
         name: this.name,
         email: this.email,
         people: this.people,
         note: this.note,
       };
-      try {
-        axios.post('/api/form', formData)
-      } catch (error) {
-        console.log(error);
-      }
 
-    },
+    try {
+      const response = await axios.post('https://matrimonio-next.vercel.app/api/form', formData, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+},
     closeModal() {
       this.modalVisible = false;
       this.successMessage = '';
       this.errorMessage = '';
     },
-  },
-};
+  }
 </script>
 
 <style>
