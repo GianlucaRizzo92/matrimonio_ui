@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="color: black;">
     <div
       class="container py-4"
       data-aos="fade-up"
