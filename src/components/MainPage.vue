@@ -1,7 +1,9 @@
 <template>
     <div id="app">
         <main-navbar/>
+        <img-carusle/>
         <!-- <countdown-timer/> -->
+        <CalendarAndTimer/>
         <Card-main id="location"/>
         <RSVP id="rsvp" />
         <Lista-Nozze id="lista-nozze"/>
@@ -16,6 +18,8 @@
   import MainFooter from './MainFooter.vue'
   import MainNavbar from './MainNavbar.vue'
   // import CountdownTimer from './CountdownTimer.vue'
+  import CalendarAndTimer from './CalendarAndTimer.vue'
+  import ImgCarusle from './ImgCarusle.vue'
 
   export default {
   components: {
@@ -24,14 +28,18 @@
     RSVP,
     MainFooter,
     MainNavbar,
-    // CountdownTimer
+    // CountdownTimer,
+    CalendarAndTimer,
+    ImgCarusle
   }
   }
   </script>
 
 <style>
 .app {
-  background-color: #110f16;
   font-family: 'Monotype Corsiva';
+}
+.main-navbar{
+  z-index: 1;
 }
 </style>

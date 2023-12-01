@@ -1,33 +1,55 @@
 <template>
   <div>
+    <div
+      class="container py-4"
+      data-aos="fade-up"
+      data-aos-delay="20"
+      data-aos-duration="500"
+    >
+      <h4>
+        Benvenuti nel nostro sito web dedicato al matrimonio! Abbiamo creato
+        questo sito come un modo comodo e interattivo per condividere con voi
+        tutti i dettagli importanti che precedono il nostro matrimonio. Non
+        vediamo l'ora di celebrare insieme a voi questo nuovo entusiasmante
+        capitolo della nostra vita...
+      </h4>
+    </div>
 
-    <div id="intro" class="text-center">
+    <div style="background-color: #f7f7f7;" data-aos="fade-up"
+      data-aos-delay="20"
+      data-aos-duration="500">
+      <div style="margin-top:2rem; text-align-last: center">
+  
+        <span style="font-size: 50px;">13 luglio 2024</span>
+      </div>
+      <div id="intro" class="text-center">
         <div class="mask">
           <div class="d-flex justify-content-center align-items-center h-100">
-            <div class="text-white px-4">
-              <h3 id="time-counter">
+            <div class="px-4">
+              <h3 id="time-counter" class="border border-light my-4 p-4">
                 <div class="countdown">
                   <div class="countdown-item">
                     <div class="countdown-value">{{ days }}</div>
-                    <div class="countdown-label">Days</div>
+                    <div class="countdown-label">Giorni</div>
                   </div>
                 <div class="countdown-item">
                   <div class="countdown-value">{{ hours }}</div>
-                  <div class="countdown-label">Hours</div>
+                  <div class="countdown-label">Ore</div>
                 </div>
                 <div class="countdown-item">
                   <div class="countdown-value">{{ minutes }}</div>
-                  <div class="countdown-label">Minutes</div>
+                  <div class="countdown-label">Minuti</div>
                 </div>
                 <div class="countdown-item">
                   <div class="countdown-value">{{ seconds }}</div>
-                  <div class="countdown-label">Seconds</div>
+                  <div class="countdown-label">Secondi</div>
                 </div>
               </div>
             </h3>
           </div>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </template>
@@ -68,62 +90,29 @@ export default {
       clearInterval(this.countdownInterval);
     }
   }
-};
+}
 </script>
 
-<style scoped>
-/* .background-image {
-  position: relative;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-color: #110f16;
-  padding-bottom: 56.25%;
-  margin-top: -2rem;
-  margin-bottom: -5rem;
-} */
-
-.mask {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+<style>
+.span {
+  font-family: 'Monotype Corsiva', cursive; /* Set font */
+  font-size: xx-large
 }
-
 .countdown {
   display: flex;
   justify-content: center;
   align-items: center; /* Center vertically */
 }
-
 .countdown-item {
   text-align: center;
   margin-right: 10px;
-  font-family: 'Alex Brush', sans-serif; /* Set font */
+  font-family: 'Monotype Corsiva', cursive; /* Set font */
 }
-
 .countdown-value {
   font-size: 50px;
 }
 
 .countdown-label {
   font-size: 34px;
-}
-
-#intro {
-  height: 100vh;
-}
-
-@media (max-width: 991px) {
-  #intro {
-    margin-top: 45px;
-  }
-  .countdown-value {
-    font-size: 36px;
-  }
-  .countdown-label {
-    font-size: 24px;
-  }
 }
 </style>

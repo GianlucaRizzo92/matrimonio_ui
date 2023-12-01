@@ -5,7 +5,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You may need to import the AOS styles
-
+import 'bootstrap';
+import 'jquery';
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
 Vue.use(AOS.init());

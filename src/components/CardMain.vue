@@ -1,22 +1,5 @@
 <template>
   <section class="light">
-    <div
-      class="container py-4"
-      data-aos="fade-up"
-      data-aos-delay="20"
-      data-aos-duration="500"
-    >
-      <br />
-      <br />
-      <br />
-      <h4>
-        Benvenuti nel nostro sito web dedicato al matrimonio! Abbiamo creato
-        questo sito come un modo comodo e interattivo per condividere con voi
-        tutti i dettagli importanti che precedono il nostro matrimonio. Non
-        vediamo l'ora di celebrare insieme a voi questo nuovo entusiasmante
-        capitolo della nostra vita...
-      </h4>
-    </div>
     <div class="container py-4">
       <h1 class="h1 text-center" id="pageHeaderTitle">Location</h1>
 
@@ -43,9 +26,7 @@
           </div>
           <div class="postcard__bar"></div>
           <div class="postcard__preview-txt">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-            fugiat asperiores inventore beatae accusamus odit minima enim,
-            commodi quia, doloribus eius!
+            È qui che Francesco ha visto l’inizio della sua avventura comunitaria: la condivisione e l’armonizzazione delle relazioni tra i fratelli e la creazione della prima fraternità francescana. In quel luogo inoltre, nello Speco superiore, ha luogo la vera nascita spirituale di Fran­cesco, quando, nell’abbandono della fede, egli prende coscienza che, proprio lui peccatore, è perdonato e amato da Dio.
           </div>
           <ul class="postcard__tagbox">
             <li class="tag__item play blue">
@@ -92,9 +73,7 @@
           </div>
           <div class="postcard__bar"></div>
           <div class="postcard__preview-txt">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-            fugiat asperiores inventore beatae accusamus odit minima enim,
-            commodi quia, doloribus eius!
+            C’è un luogo, dove dare il benvenuto ai sogni, ai giorni speciali, agli eventi da ricordare, è un dono da offrire agli occhi, così come al palato della gente. C’è un luogo che racconta di una cucina "semplicata": 'semplice', come i sapori che da sempre ha l’onore di preservare, 'complicata' da descrivere, per chi prima d’ora non l’ha mai incontrata, vissuta, assaporata. C’è un luogo dove, l’incontro tra gusto ed emozioni, crea quell’abbinamento che è perfetto una volta e quella…
           </div>
           <ul class="postcard__tagbox">
             <li class="tag__item play blue">

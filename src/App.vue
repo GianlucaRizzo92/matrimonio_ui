@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="app">
     <main-page/>
   </div>
 </template>
@@ -19,7 +19,8 @@ export default {
 
 <style>
 .app{
-  font-family: 'Monotype Corsiva'
+  font-family: 'Monotype Corsiva';
+  background-color:#f7f7f7
 }
 ::-webkit-scrollbar {
     width: 7px; /* width of the scrollbar */

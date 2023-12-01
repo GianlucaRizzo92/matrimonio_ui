@@ -1,69 +1,54 @@
 <template>
-  <div>
-    <div id="mainNavigation" class="fixed-top">
-      <nav role="navigation">
-        <div class="py-3 text-center border-bottom">
-        </div>
-        <div class="navbar-expand-md">
-          <div class="navbar-dark text-center my-2">
-            <button class="navbar-toggler w-75" type="button" @click="toggleNavbar">
-              <span class="navbar-toggler-icon"></span> <span class="align-middle">Menu</span>
-            </button>
-          </div>
-          <div class="text-center mt-3" :class="{ 'collapse navbar-collapse': !isNavbarOpen }" id="navbarNavDropdown">
-            <ul class="navbar-nav mx-auto ">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#home" @click="closeNavbar">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#location" @click="closeNavbar">Location</a>
-              </li>
-              <!-- <li class="nav-item">
-                <img src="../static/output-onlinepngtools.png" alt="" class="invert" style="max-width: 100px;">
-              </li> -->
-              <li class="nav-item">
-                <a class="nav-link" href="#rsvp" @click="closeNavbar">RSVP</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#lista-nozze" @click="closeNavbar">Lista Nozze</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-    <div id="intro" class="text-center">
-      <div class="background-image">
-        <div class="mask">
-          <div class="d-flex justify-content-center align-items-center h-100">
-            <div class="text-white px-4">
-              <h3 id="time-counter" class="border border-light my-4 p-4">
-                <div class="countdown">
-                  <div class="countdown-item">
-                    <div class="countdown-value">{{ days }}</div>
-                    <div class="countdown-label">Days</div>
-                  </div>
-                  <div class="countdown-item">
-                    <div class="countdown-value">{{ hours }}</div>
-                    <div class="countdown-label">Hours</div>
-                  </div>
-                  <div class="countdown-item">
-                    <div class="countdown-value">{{ minutes }}</div>
-                    <div class="countdown-label">Minutes</div>
-                  </div>
-                  <div class="countdown-item">
-                    <div class="countdown-value">{{ seconds }}</div>
-                    <div class="countdown-label">Seconds</div>
-                  </div>
-                </div>
-              </h3>
-            </div>
-          </div>
-        </div>
+  <div id="mainNavigation" :class="{ 'scrolled': isScrolled }">
+    <nav role="navigation" class="navbar navbar-expand-md navbar-light">
+      <a class="navbar-brand" href="#">
+        <img src="../static/Gianluca&Anna.svg" height="80" alt="Logo" style="margin-left: -1rem;">
+      </a>
+      <button class="navbar-toggler" type="button" @click="toggleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="text-center mt-3 collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mx-auto">
+          <!-- Your main menu items -->
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#home" @click="closeNavbar">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#location" @click="closeNavbar">Location</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#rsvp" @click="closeNavbar">RSVP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#lista-nozze" @click="closeNavbar">Lista Nozze</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Mobile-only menu -->
+    <div class="mobile-menu" v-if="isNavbarOpen">
+      <div class="mobile-menu-content">
+        <ul class="navbar-nav mx-auto">
+          <!-- Your main menu items -->
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#home" @click="closeNavbar">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#location" @click="closeNavbar">Location</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#rsvp" @click="closeNavbar">RSVP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#lista-nozze" @click="closeNavbar">Lista Nozze</a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
 </template>
+
 
 <script>
 export default {
@@ -71,17 +56,10 @@ export default {
     return {
       isNavbarOpen: false,
       isScrolled: false,
-      days: 0,
-      hours: 0,
-      minutes: 0,
-      seconds: 0,
-      countdownInterval: null,
-      targetDate: new Date('2024-07-13T18:00:00Z') // Replace with your target date
-    };
+    }
   },
   mounted() {
-    this.startCountdown();
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll)
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll);
@@ -91,49 +69,35 @@ export default {
       this.isNavbarOpen = !this.isNavbarOpen;
 
       this.$nextTick(() => {
-        const mainNavigation = document.getElementById('mainNavigation');
-        if (mainNavigation) {
+        const mobileMenu = document.querySelector('.mobile-menu');
+        if (mobileMenu) {
           if (this.isNavbarOpen) {
-            mainNavigation.classList.add('opened');
+            mobileMenu.classList.add('opened');
           } else {
-            mainNavigation.classList.remove('opened');
+            mobileMenu.classList.remove('opened');
           }
         }
-      });
+      })
     },
     handleScroll() {
-      // Check if the user has scrolled down
-      this.isScrolled = window.scrollY > 0;
-      const mainNavigation = document.getElementById('mainNavigation');
-      if(this.isScrolled) {
-        mainNavigation.classList.add('scrolled')
-      } else {
-        mainNavigation.classList.remove('scrolled')
+    // Check if the user has scrolled down
+    const scrolled = window.scrollY > 100;
+    const mainNavigation = document.getElementById('mainNavigation');
 
-      }
-    },
+    if (scrolled && !this.isScrolled) {
+      // Add the class only when scrolling down
+      mainNavigation.classList.add('scrolled');
+    } else if (!scrolled && this.isScrolled) {
+      // Remove the class when scrolling back to the top
+      mainNavigation.classList.remove('scrolled');
+    }
+
+    // Update the isScrolled flag
+    this.isScrolled = scrolled;
+  },
     closeNavbar() {
       this.isNavbarOpen = false;
     },
-    startCountdown() {
-      this.countdownInterval = setInterval(() => {
-        const now = new Date().getTime();
-        const distance = this.targetDate - now;
-
-        this.days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        this.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        this.seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        if (distance < 0) {
-          this.stopCountdown();
-          // Do something when the countdown is finished
-        }
-      }, 1000);
-    },
-    stopCountdown() {
-      clearInterval(this.countdownInterval);
-    }
   }
 };
 </script>
@@ -145,23 +109,37 @@ export default {
   left: 0;
   width: 100%;
   z-index: 100;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
-#mainNavigation.scrolled {
-  background-color: #ebc79e;
+
+.navbar-toggler {
+  margin-top: 8px; /* Adjust the margin for better alignment */
 }
 
+#mainNavigation.opened {
+  background-color: #ffff; /* Change background color when menu is open */
+}
+
+#mainNavigation.scrolled {
+  background-color: #ffff;
+
+}
+#mainNavigation.scrolled.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
 .collapse {
   display: none;
 }
 
 #mainNavigation a {
-  font-family: 'Cabin', sans-serif;
-  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px; /* Increase font size for better readability */
   text-transform: uppercase;
-  letter-spacing: 2px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  letter-spacing: 0px;
+  font-weight: 600;
+  color: #dfdfdf; /* Default color */
 }
 
 .nav-item a {
@@ -169,91 +147,82 @@ export default {
 }
 
 .nav-item a:hover {
-  color: #fff
+  color: #fff;
 }
 
 .nav-item {
-  min-width: 12vw;
-}
-
-.background-image {
-  background-image: url('../static/main-bg.jpg');
-  position: relative;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* Adjust the background size as needed */
-  background-position: center;
-  background-color: #110f16;
-  padding-bottom: 56.25%;
-  /* 16:9 aspect ratio */
-  margin-top: -3rem;
-  margin-bottom: -5rem;
-}
-
-.background-image .heading {
-  color: white;
-  text-align: center;
-  /* padding-top: 200px; */
-}
-
-.mask {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.countdown {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* Center vertically */
-}
-
-.countdown-item {
-  text-align: center;
-  margin-right: 10px;
-  font-family: 'Monotype Corsiva', cursive;
-  /* Set font */
-}
-
-.countdown-value {
-  font-size: 50px;
-}
-
-.countdown-label {
-  font-size: 34px;
-}
-
-#intro {
-  position: relative;
-  z-index: 99;
+  min-width: 10vw;
 }
 
 #mainNavigation .py-3 {
   position: relative;
-  z-index: 101;
-  /* Set an even higher z-index for the inner content */
-}
-
-@media (max-width: 991px) {
-  #intro {
-    margin-top: 45px;
-  }
-
-  .countdown-value {
-    font-size: 36px;
-  }
-
-  .countdown-label {
-    font-size: 24px;
-  }
+  /* z-index: 101; */
 }
 
 #navbarNavDropdown.collapsing .navbar-nav,
 #navbarNavDropdown.show .navbar-nav {
   background: #01363b;
   padding: 12px;
+}
+
+/* Apply styles when scrolling */
+#mainNavigation.scrolled a {
+  color: #000; /* Change color on scroll */
+}
+
+/* Media query for small screens */
+@media (max-width: 767px) {
+  #mainNavigation {
+    background-color: #fff; /* Set background color to white for screens below 767px */
+  }
+  .navbar-toggler {
+    margin-left: auto; /* Center the toggle button on small screens */
+    margin-right: 15px; /* Add some right margin for better spacing */
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px; /* Add spacing between menu items */
+  }
+}
+
+.mobile-menu {
+  background-color: #fff; /* Set background color to white */
+  padding: 12px;
+  text-align: center;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.mobile-menu.opened {
+  max-height: 500px;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Add the following styles to center the button with the logo */
+.mobile-menu-content .navbar-toggler {
+  margin-top: 12px;
+}
+
+/* Adjust the margin for better alignment */
+.mobile-menu-content .navbar-nav {
+  margin-top: 8px;
 }
 </style>
