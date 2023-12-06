@@ -4,7 +4,7 @@
       <a class="navbar-brand" href="#">
         <img src="../static/Gianluca&Anna.svg" height="80" alt="Logo" >
       </a>
-      <button class="navbar-toggler" type="button" @click="toggleNavbar">
+      <button class="navbar-toggler" type="button" @click="toggleNavbar" style="border: none;">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="text-center mt-3 collapse navbar-collapse" id="navbarNavDropdown">
@@ -176,11 +176,11 @@ export default {
     background-color: #fff; /* Set background color to white for screens below 767px */
   }
   .navbar-toggler {
-    margin-left: auto; /* Center the toggle button on small screens */
-    margin-right: auto; /* Center the toggle button on small screens */
-    display: block; /* Make the button a block element to center it */
-    width: 80%; /* Set width to 80px */
-  }
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    /* width: 80%; */
+  } 
 
   .navbar-nav {
     display: flex;
@@ -192,9 +192,10 @@ export default {
     margin-bottom: 10px; /* Add spacing between menu items */
   }
   .navbar-brand {
-    text-align: center; /* Center the navbar brand */
-    width: 100%; /* Make the brand take up the full width */
-    margin-right: 0; /* Remove the right margin */
+    text-align: center; 
+    width: 70%; 
+    margin-right: 0; 
+    margin-left: -1.5rem ;
   }
 }
 

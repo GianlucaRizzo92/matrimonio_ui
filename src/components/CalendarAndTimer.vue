@@ -6,7 +6,7 @@
       data-aos-delay="20"
       data-aos-duration="500"
     >
-      <h4>
+      <h4 style="font-family:'Monotype Corsiva', cursive;">
         Benvenuti nel nostro sito web dedicato al matrimonio! Abbiamo creato
         questo sito come un modo comodo e interattivo per condividere con voi
         tutti i dettagli importanti che precedono il nostro matrimonio. Non
@@ -19,7 +19,7 @@
       data-aos-delay="20"
       data-aos-duration="500">
       <div style="margin-top:2rem; text-align-last: center">
-  
+
         <span style="font-size: 50px; font-family:'Monotype Corsiva', cursive; ">13 luglio 2024</span>
       </div>
       <div id="intro" class="text-center">
@@ -94,9 +94,6 @@ export default {
 </script>
 
 <style>
-.h4 {
-  font-family: 'Monotype Corsiva', cursive; 
-}
 .span {
   font-family: 'Monotype Corsiva', cursive; /* Set font */
   font-size: xx-large
