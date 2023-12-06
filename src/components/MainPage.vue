@@ -2,37 +2,48 @@
     <div id="app">
         <main-navbar/>
         <img-carusle/>
-        <!-- <countdown-timer/> -->
         <CalendarAndTimer/>
         <Card-main id="location"/>
-        <RSVP id="rsvp" />
+        <RSVP id="rsvp" @start-request="startRequest"/>
         <Lista-Nozze id="lista-nozze"/>
         <Main-Footer/>
+        <div v-if="loading" class="loading-overlay">
+    <!-- Add your loading spinner or message here -->
+    Loading...
+  </div>
     </div>
-  </template>
-  
+</template>
+
   <script>
   import CardMain from './CardMain.vue'
   import RSVP from './RSVP.vue'
   import ListaNozze from './ListaNozze.vue'
   import MainFooter from './MainFooter.vue'
   import MainNavbar from './MainNavbar.vue'
-  // import CountdownTimer from './CountdownTimer.vue'
   import CalendarAndTimer from './CalendarAndTimer.vue'
   import ImgCarusle from './ImgCarusle.vue'
 
   export default {
-  components: {
-    CardMain,
-    ListaNozze,
-    RSVP,
-    MainFooter,
-    MainNavbar,
-    // CountdownTimer,
-    CalendarAndTimer,
-    ImgCarusle
+    components: {
+      CardMain,
+      ListaNozze,
+      RSVP,
+      MainFooter,
+      MainNavbar,
+      CalendarAndTimer,
+      ImgCarusle
+    },
+    data() {
+      return {
+        loading: false,
+      }
+    },
+    methods: {
+    startRequest() {
+      this.loading = !this.loading;
+    },
   }
-  }
+}
   </script>
 
 <style>
@@ -41,5 +52,17 @@
 }
 .main-navbar{
   z-index: 1;
+}
+.loading-overlay {
+  /* Add your overlay styles here */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>

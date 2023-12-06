@@ -38,6 +38,7 @@
                 Invia RSVP
               </button>
             </div>
+
           </form>
         </div>
       </div>
@@ -62,10 +63,10 @@ export default {
     return {
       name: '',
       email: '',
-      people: 0,
+      people: null,
       note: '',
       successMessage: '',
-      errorMessage: '',
+      errorMessage: ''
     };
   },
   mounted() {
@@ -86,7 +87,7 @@ export default {
         people: this.people,
         note: this.note,
       };
-
+      this.$emit('start-request')
       try {
         const response = await axios.post('https://matrimonio-next.vercel.app/api/form', formData, {
           headers: {
@@ -114,6 +115,7 @@ export default {
           text: 'Si è verificato un problema. Se l\'errore persiste non esitare a contattarci',
         });
       } finally {
+        this.$emit('start-request')
         this.name = null,
         this.email = null,
         this.people = null,
