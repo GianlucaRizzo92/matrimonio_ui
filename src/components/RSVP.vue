@@ -97,7 +97,7 @@ export default {
           Swal.fire({
             icon: 'success',
             title: 'Success!',
-            text: 'La partecipazione è stata confermata con successo. Per maggiori info no nesitare a contattarci.',
+            text: 'La partecipazione è stata confermata con successo. Per maggiori info non esitare a contattarci.',
           });
         } else {
           Swal.fire({
@@ -113,6 +113,11 @@ export default {
           title: 'Error!',
           text: 'Si è verificato un problema. Se l\'errore persiste non esitare a contattarci',
         });
+      } finally {
+        this.name = null,
+        this.email = null,
+        this.people = null,
+        this.note = null
       }
     },
   }

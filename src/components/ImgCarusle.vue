@@ -16,9 +16,9 @@ export default {
   data() {
     return {
       imageConfigs: [
-      { url: require('@/static/DSC_0343.jpg'), position: '38% center' },
-        { url: require('@/static/DSC_0375.jpg')},
-        { url: require('@/static/DSC_0337.jpg'), position: '48% top' },
+      { url: require('@/static/img1.jpg'), position: '46.5% center' },
+      { url: require('@/static/img2.jpg'), position: '43% center'},
+      { url: require('@/static/img3.jpg'), position: '37% top' }
       ],
       currentImageIndex: 0,
       imageUrl: '',
@@ -37,7 +37,7 @@ export default {
         this.updateImage();
         this.transitioning = false;
       }, 1000); // Adjust this delay to match the transition duration
-    }, 3000);
+    }, 4000);
   },
   methods: {
     updateImage() {
