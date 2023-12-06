@@ -176,8 +176,8 @@ export default {
     background-color: #fff; /* Set background color to white for screens below 767px */
   }
   .navbar-toggler {
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;*/
+    margin-right: 1rem;
     display: block;
     /* width: 80%; */
   } 
