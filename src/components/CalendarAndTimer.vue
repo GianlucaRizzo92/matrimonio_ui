@@ -115,4 +115,13 @@ export default {
 .countdown-label {
   font-size: 34px;
 }
+
+@media screen and (max-width: 767px) {
+  .countdown {
+    flex-direction: column; /* Stack items vertically on small screens */
+  }
+  .countdown-item {
+    margin-bottom: 10px; /* Add some space between stacked items */
+  }
+}
 </style>
