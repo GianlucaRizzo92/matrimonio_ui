@@ -1,5 +1,11 @@
 <template>
   <div style="color: black;">
+    <div class="imgPrincipale"
+    data-aos="fade-up"
+      data-aos-delay="20"
+      data-aos-duration="500">
+      <img src="../static/green-flower.png" alt="" class="img-fluid">
+    </div>
     <div
       class="container py-4"
       data-aos="fade-up"
@@ -7,7 +13,7 @@
       data-aos-duration="500"
     >
       <h4 style="font-family:'Monotype Corsiva', cursive;">
-        Benvenuti nel nostro sito web dedicato al matrimonio! Abbiamo creato
+        Benvenuti nel sito web dedicato al nostro matrimonio! Abbiamo creato
         questo sito come un modo comodo e interattivo per condividere con voi
         tutti i dettagli importanti che precedono il nostro matrimonio. Non
         vediamo l'ora di celebrare insieme a voi questo nuovo entusiasmante
@@ -123,5 +129,17 @@ export default {
   .countdown-item {
     margin-bottom: 10px; /* Add some space between stacked items */
   }
+}
+.img {
+  border: 0;
+  height: auto;
+  vertical-align: top;
+  margin: 0 0 15px;
+  max-width: 100%;
+}
+.imgPrincipale {
+    margin-top:-5rem;
+    text-align: center;
+    line-height: 20px;
 }
 </style>

@@ -1,5 +1,5 @@
 <template >
-  <section class="light">
+  <section class="rsvp">
     <div class="space" data-aos="fade-up" data-aos-delay="20" data-aos-duration="500">
       <h1 class="h1 text-center">Répondez, s'il vous plaît</h1>
       <h4 style="text-align: center;">(Inserisci qu i dati per confermare la partecipazione)</h4>
@@ -103,7 +103,7 @@ body {
   background: #F5EFE8;
 }
 
-.light {
+.rsvp {
   font-family: 'Monotype Corsiva';
 }
 
