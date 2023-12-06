@@ -105,7 +105,6 @@ body {
 
 .light {
   font-family: 'Monotype Corsiva';
-  background: #F5EFE8;
 }
 
 .space {

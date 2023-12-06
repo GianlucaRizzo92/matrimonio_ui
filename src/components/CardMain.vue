@@ -52,7 +52,7 @@
       <article
         class="postcard light red"
         :class="{ expanded: isCardExpanded }"
-        data-aos="fade-up"
+        :data-aos="isCardExpanded ? '' : 'fade-up'"
         data-aos-delay="20"
         data-aos-duration="500"
       >
@@ -86,7 +86,7 @@
             </li>
             <li class="tag__item play blue">
               <button
-                @click="isCardExpanded = !isCardExpanded"
+                @click="handleCardExpand"
                 class="menu-button"
               >
                 <i class="fas fa-play mr-2"></i>Menù
@@ -135,39 +135,46 @@ export default {
       isCardExpanded: false,
     };
   },
-  mounted() {
-    this.$nextTick(() => {
-      AOS.init();
-    });
+  // mounted() {
+  //   if (!this.isCardExpanded) {
+  //     this.$nextTick(() => {
+  //       AOS.init();
+  //     });
+  //   }
+  // },
+  // destroyed() {
+  //   AOS.destroy();
+  // }
+  methods: {
+    handleCardExpand() {
+      this.isCardExpanded = !this.isCardExpanded;
+
+      // Check if the card is not expanded before triggering AOS
+      if (!this.isCardExpanded) {
+        this.triggerAOS();
+      }
+    },
+    triggerAOS() {
+      this.$nextTick(() => {
+        AOS.refreshHard();
+      });
+    },
   },
+  destroyed() {
+    AOS.destroy();
+  }
 };
 </script>
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
-$main-green: #79dd09 !default;
-$main-green-rgb-015: rgba(121, 221, 9, 0.1) !default;
-$main-yellow: #bdbb49 !default;
-$main-yellow-rgb-015: rgba(189, 187, 73, 0.1) !default;
 $main-red: #bd150b !default;
 $main-red-rgb-015: rgba(189, 21, 11, 0.1) !default;
 $main-blue: #0076bd !default;
 $main-blue-rgb-015: rgba(0, 118, 189, 0.1) !default;
 
-/* This pen */
-body {
-  font-size: 16px;
-  color: #ffffff;
-  text-rendering: optimizeLegibility;
-  font-weight: initial;
-}
-
-.dark {
-  background: #110f16;
-}
-
 .light {
-  background: #ebc79e;
+  background: #f1f1f1;
   font-family: "Monotype Corsiva", cursive;
 }
 
@@ -182,6 +189,7 @@ a:hover {
   text-transform: uppercase;
   text-align: center;
   font-size: 2.5rem;
+  font-family:'Monotype Corsiva', cursive;
 }
 
 /* Cards */
@@ -194,17 +202,6 @@ a:hover {
   overflow: hidden;
   position: relative;
   color: #18151f;
-
-  &.dark {
-    background-color: #18151f;
-  }
-  &.light {
-    background-color: #f5efe8;
-  }
-
-  .t-dark {
-    color: #18151f;
-  }
 
   a {
     color: inherit;
@@ -241,7 +238,7 @@ a:hover {
     height: 10px;
     margin: 10px 0;
     border-radius: 5px;
-    background-color: #f5efe8;
+    background-color: #f1f1f1;
     transition: width 0.2s ease;
   }
 
@@ -278,7 +275,7 @@ a:hover {
       transition: background-color 0.3s;
 
       &:hover {
-        background: #f5efe8;
+        background: #f1f1f1;
       }
     }
   }
@@ -290,7 +287,7 @@ a:hover {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(-70deg, #f5efe8, transparent 50%);
+    background-image: linear-gradient(-70deg, #f1f1f1, transparent 50%);
     opacity: 1;
     border-radius: 10px;
   }
@@ -346,7 +343,7 @@ a:hover {
     }
 
     &:nth-child(2n + 1) .postcard__text::before {
-      left: -23px !important;
+      left: -25px !important;
       transform: rotate(4deg);
     }
 
@@ -378,35 +375,9 @@ a:hover {
   }
   .postcard.light {
     .postcard__text:before {
-      background: #f5efe8;
+      background: #f1f1f1;
     }
   }
-}
-
-/* COLORS */
-.postcard .postcard__tagbox .green.play:hover {
-  background: $main-green;
-  color: black;
-}
-.green .postcard__title:hover {
-  color: $main-green;
-}
-.green .postcard__bar {
-  background-color: $main-green;
-}
-.green::before {
-  background-image: linear-gradient(
-    -30deg,
-    $main-green-rgb-015,
-    transparent 50%
-  );
-}
-.green:nth-child(2n)::before {
-  background-image: linear-gradient(
-    30deg,
-    $main-green-rgb-015,
-    transparent 50%
-  );
 }
 
 .postcard .postcard__tagbox .blue.play:hover {
@@ -445,46 +416,7 @@ a:hover {
   background-image: linear-gradient(30deg, $main-red-rgb-015, transparent 50%);
 }
 
-.postcard .postcard__tagbox .yellow.play:hover {
-  background: $main-yellow;
-  color: black;
-}
-.yellow .postcard__title:hover {
-  color: $main-yellow;
-}
-.yellow .postcard__bar {
-  background-color: $main-yellow;
-}
-.yellow::before {
-  background-image: linear-gradient(
-    -30deg,
-    $main-yellow-rgb-015,
-    transparent 50%
-  );
-}
-.yellow:nth-child(2n)::before {
-  background-image: linear-gradient(
-    30deg,
-    $main-yellow-rgb-015,
-    transparent 50%
-  );
-}
-
 @media screen and (min-width: 769px) {
-  .green::before {
-    background-image: linear-gradient(
-      -80deg,
-      $main-green-rgb-015,
-      transparent 50%
-    );
-  }
-  .green:nth-child(2n)::before {
-    background-image: linear-gradient(
-      80deg,
-      $main-green-rgb-015,
-      transparent 50%
-    );
-  }
 
   .blue::before {
     background-image: linear-gradient(
@@ -516,20 +448,6 @@ a:hover {
     );
   }
 
-  .yellow::before {
-    background-image: linear-gradient(
-      -80deg,
-      $main-yellow-rgb-015,
-      transparent 50%
-    );
-  }
-  .yellow:nth-child(2n)::before {
-    background-image: linear-gradient(
-      80deg,
-      $main-yellow-rgb-015,
-      transparent 50%
-    );
-  }
 }
 .postcard.expanded {
   flex-basis: 100%;
