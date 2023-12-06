@@ -17,8 +17,9 @@ export default {
     return {
       imageConfigs: [
       { url: require('@/static/img1.jpg'), position: '46.5% center' },
-      { url: require('@/static/img2.jpg'), position: '43% center'},
-      { url: require('@/static/img3.jpg'), position: '37% top' }
+       { url: require('@/static/img2.jpg'), position: '39% center'},
+      // { url: require('@/static/img3.jpg'), position: '37% top' }
+      { url: require('@/static/img4.jpg'), position: '45% top' }
       ],
       currentImageIndex: 0,
       imageUrl: '',
