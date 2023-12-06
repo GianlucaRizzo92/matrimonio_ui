@@ -4,9 +4,9 @@
     data-aos="fade-up"
       data-aos-delay="20"
       data-aos-duration="500">
-      <img src="../static/fiori.png" alt="" class="img-fluid">
+      <img src="../static/green-flower.png" alt="" class="img-fluid">
     </div>
-    <div style="margin-top:2rem; text-align-last: center">
+    <div style="margin-top:2rem; text-align: center">
         <span style="font-size: 50px; font-family:'Monotype Corsiva', cursive">Ci sposiamo!</span>
       </div>
     <div
@@ -15,7 +15,7 @@
       data-aos-delay="20"
       data-aos-duration="500"
     >
-      <h3 style="font-family:'Monotype Corsiva', cursive;">
+      <h3 style="font-family:'Monotype Corsiva', cursive; text-align: center;">
         Benvenuti nel sito web dedicato al nostro matrimonio! Abbiamo creato
         questo sito come un modo comodo e interattivo per condividere con voi
         tutti i dettagli importanti che precedono il nostro matrimonio. Non
@@ -28,7 +28,7 @@
       data-aos-delay="20"
       data-aos-duration="500">
 
-      <div style="margin-top:2rem; text-align-last: center">
+      <div style="margin-top:2rem; text-align: center">
         <span style="font-size: 50px; font-family:'Monotype Corsiva', cursive; ">13 luglio 2024</span>
       </div>
 
@@ -140,7 +140,6 @@ export default {
   vertical-align: top;
   margin: 0 0 15px;
   max-width: 100%;
-  height: 200px
 }
 .imgPrincipale {
     margin-top:-5rem;

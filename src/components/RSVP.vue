@@ -1,10 +1,10 @@
 <template >
   <section class="rsvp">
     <div class="container py-4" data-aos="fade-up" data-aos-delay="20" data-aos-duration="500">
-      <div style="margin-top:2rem; text-align-last: center">
+      <div style="margin-top:2rem; text-align: center">
         <span style="font-size: 48px; font-family:'Monotype Corsiva', cursive">Répondez, s'il vous plaît</span>
       </div>
-      <div style="text-align-last: center">
+      <div style="text-align: center">
         <span style="font-size: 22px; font-family:'Monotype Corsiva', cursive">(Inserisci qui i dati per confermare la partecipazione)</span>
       </div>
 
@@ -33,7 +33,7 @@
                 placeholder="" v-model="note"></textarea>
             </label>
 
-            <div class="mb-3" style="text-align-last: center;">
+            <div class="mb-3" style="text-align: center;">
               <button style="font-family:'Monotype Corsiva', cursive" type="submit" class="btn btn-primary px-3" :disabled="isFormDisabled">
                 Invia RSVP
               </button>

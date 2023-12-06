@@ -1,11 +1,11 @@
 <template>
   <section class="dark">
     <div class="space">
-      <div style="margin-top:2rem; text-align-last: center">
+      <div style="margin-top:2rem; text-align: center">
         <span style="font-size: 50px; font-family:'Monotype Corsiva', cursive">Lista nozze</span>
       </div>
 
-      <div style="text-align-last: center; padding: 35px">
+      <div style="text-align: center; padding: 35px">
         <span style="font-size: 22px; font-family:'Monotype Corsiva', cursive">Per noi la cosa più importante è condividere insieme il nostro giorno. Nel caso desideriate donarci un ricordo, saremo felici se vorrete contribuire a rendere speciale il nostro viaggio di nozze</span>
       </div>
 

@@ -470,7 +470,7 @@ a:hover {
 }
 
 .centered-list {
-  text-align-last: center;
+  text-align: center;
   text-align: center;
   padding: 0;
 }
