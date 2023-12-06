@@ -28,25 +28,18 @@
           <div class="postcard__preview-txt">
             È qui che Francesco ha visto l’inizio della sua avventura comunitaria: la condivisione e l’armonizzazione delle relazioni tra i fratelli e la creazione della prima fraternità francescana. In quel luogo inoltre, nello Speco superiore, ha luogo la vera nascita spirituale di Fran­cesco, quando, nell’abbandono della fede, egli prende coscienza che, proprio lui peccatore, è perdonato e amato da Dio.
           </div>
-          <ul class="postcard__tagbox">
-            <li class="tag__item play blue">
+          <div class="postcard__tagbox">
+            <div style="padding: 5px">
               <button
-                onclick="window.open( `https://www.google.it/maps/dir//Convento+San+Giacomo,+Piazzale+Missioni+Francescane,+snc,+02018+Poggio+Bustone+RI/@42.5043529,12.8905518,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x132e540b42283029:0x6c054c573b0f484!2m2!1d12.893072!2d42.5044501!3e0`, '_blank');"
-                class="menu-button"
-              >
-                <i class="fas fa-play mr-2"></i>Come arrivare
-              </button>
-            </li>
-
-            <li class="tag__item play blue">
-              <button
-                onclick="window.open( `https://www.santuarivallesanta.com/santuari/poggio-bustone/`, '_blank');"
-                class="menu-button"
-              >
-                <i class="fas fa-play mr-2"></i>Altre informazioni
-              </button>
-            </li>
-          </ul>
+                 onclick="window.open( `https://www.google.it/maps/dir//Convento+San+Giacomo,+Piazzale+Missioni+Francescane,+snc,+02018+Poggio+Bustone+RI/@42.5043529,12.8905518,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x132e540b42283029:0x6c054c573b0f484!2m2!1d12.893072!2d42.5044501!3e0`, '_blank');"
+                type="button" class="btn btn-outline-secondary">Come arrivare</button>
+              </div>
+              <div style="padding: 5px">
+                <button
+                  onclick="window.open( `https://www.santuarivallesanta.com/santuari/poggio-bustone/`, '_blank');"
+                  type="button" class="btn btn-outline-secondary">Altre informazioni</button>
+              </div>
+            </div>
         </div>
       </article>
       <article
@@ -75,24 +68,21 @@
           <div class="postcard__preview-txt">
             C’è un luogo, dove dare il benvenuto ai sogni, ai giorni speciali, agli eventi da ricordare, è un dono da offrire agli occhi, così come al palato della gente. C’è un luogo che racconta di una cucina "semplicata": 'semplice', come i sapori che da sempre ha l’onore di preservare, 'complicata' da descrivere, per chi prima d’ora non l’ha mai incontrata, vissuta, assaporata. C’è un luogo dove, l’incontro tra gusto ed emozioni, crea quell’abbinamento che è perfetto una volta e quella…
           </div>
-          <ul class="postcard__tagbox">
-            <li class="tag__item play blue">
+          <div class="postcard__tagbox">
+            <div style="padding: 5px">
               <button
                 onclick="window.open( `https://www.google.com/maps/dir//Colle+Aluffi+Eventi,+Via+Chiesa+Nuova,+195,+02100+Rieti+RI/@42.4396516,12.8058796,15z/data=!4m9!4m8!1m0!1m5!1m1!1s0x132faaa0a231eb49:0x9a87736d0794782a!2m2!1d12.8058796!2d42.4396516!3e0`, '_blank');"
-                class="menu-button"
-              >
-                <i class="fas fa-play mr-2"></i>Come arrivare
-              </button>
-            </li>
-            <li class="tag__item play blue">
+                type="button" class="btn btn-outline-secondary">Come arrivare</button>
+            </div>
+            <div style="padding: 5px">
               <button
                 @click="handleCardExpand"
-                class="menu-button"
-              >
-                <i class="fas fa-play mr-2"></i>Menù
+                type="button"
+                class="btn btn-outline-secondary"
+              > Menù
               </button>
-            </li>
-          </ul>
+            </div>
+          </div>
           <div class="postcard__expanded-text" v-if="isCardExpanded">
             <h1 class="centered-list">Menù</h1>
             <ul class="centered-list">
@@ -220,8 +210,11 @@ a:hover {
 
   .postcard__title {
     font-size: 1.75rem;
+    font-family:'Monotype Corsiva', cursive;
   }
-
+  .postcard__subtitle small{
+    font-family:'Monotype Corsiva', cursive;
+  }
   .postcard__img {
     max-height: 180px;
     width: 100%;
@@ -254,6 +247,7 @@ a:hover {
     text-overflow: ellipsis;
     text-align: justify;
     height: 100%;
+    font-family:'Monotype Corsiva', cursive;
   }
 
   .postcard__tagbox {
@@ -261,7 +255,7 @@ a:hover {
     flex-flow: row wrap;
     font-size: 14px;
     margin: 20px 0 0 0;
-    padding: 0;
+    padding: 5;
     justify-content: center;
 
     .tag__item {
@@ -303,6 +297,7 @@ a:hover {
 
     .postcard__title {
       font-size: 2rem;
+      font-family:'Monotype Corsiva', cursive;
     }
 
     .postcard__tagbox {
@@ -467,9 +462,9 @@ a:hover {
   background: radial-gradient(circle at center, white, transparent 60%);
 }
 
-.postcard.expanded .postcard__tagbox {
-  justify-content: flex-start;
-}
+// .postcard.expanded .postcard__tagbox {
+//   justify-content: flex-start;
+// }
 
 @media screen and (min-width: 769px) {
   .postcard.expanded .postcard__text {
@@ -477,18 +472,18 @@ a:hover {
   }
 }
 
-.menu-button {
-  border: none;
-  background-color: transparent;
-  color: inherit;
-  font: inherit;
-  cursor: pointer;
-  text-decoration: underline;
-}
+// .menu-button {
+//   border-radius: 15px;
+//   background-color: transparent;
+//   color: inherit;
+//   font: inherit;
+//   cursor: pointer;
 
-.menu-button:focus {
-  outline: none;
-}
+// }
+
+// .menu-button:focus {
+//   outline: none;
+// }
 
 .centered-list {
   text-align-last: center;
