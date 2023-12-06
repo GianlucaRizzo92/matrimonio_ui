@@ -2,7 +2,7 @@
   <div id="mainNavigation" :class="{ 'scrolled': isScrolled }">
     <nav role="navigation" class="navbar navbar-expand-md navbar-light">
       <a class="navbar-brand" href="#">
-        <img src="../static/Gianluca&Anna.svg" height="80" alt="Logo" style="margin-left: -1rem;">
+        <img src="../static/Gianluca&Anna.svg" height="80" alt="Logo" >
       </a>
       <button class="navbar-toggler" type="button" @click="toggleNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -177,7 +177,9 @@ export default {
   }
   .navbar-toggler {
     margin-left: auto; /* Center the toggle button on small screens */
-    margin-right: 15px; /* Add some right margin for better spacing */
+    margin-right: auto; /* Center the toggle button on small screens */
+    display: block; /* Make the button a block element to center it */
+    width: 80%; /* Set width to 80px */
   }
 
   .navbar-nav {
@@ -188,6 +190,11 @@ export default {
 
   .navbar-nav .nav-item {
     margin-bottom: 10px; /* Add spacing between menu items */
+  }
+  .navbar-brand {
+    text-align: center; /* Center the navbar brand */
+    width: 100%; /* Make the brand take up the full width */
+    margin-right: 0; /* Remove the right margin */
   }
 }
 

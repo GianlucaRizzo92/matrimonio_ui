@@ -20,7 +20,7 @@
       data-aos-duration="500">
       <div style="margin-top:2rem; text-align-last: center">
   
-        <span style="font-size: 50px;">13 luglio 2024</span>
+        <span style="font-size: 50px; font-family:'Monotype Corsiva', cursive; ">13 luglio 2024</span>
       </div>
       <div id="intro" class="text-center">
         <div class="mask">
@@ -94,6 +94,9 @@ export default {
 </script>
 
 <style>
+.h4 {
+  font-family: 'Monotype Corsiva', cursive; 
+}
 .span {
   font-family: 'Monotype Corsiva', cursive; /* Set font */
   font-size: xx-large
