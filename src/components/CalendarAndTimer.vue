@@ -4,8 +4,11 @@
     data-aos="fade-up"
       data-aos-delay="20"
       data-aos-duration="500">
-      <img src="../static/green-flower.png" alt="" class="img-fluid">
+      <img src="../static/fiori.png" alt="" class="img-fluid">
     </div>
+    <div style="margin-top:2rem; text-align-last: center">
+        <span style="font-size: 50px; font-family:'Monotype Corsiva', cursive">Ci sposiamo!</span>
+      </div>
     <div
       class="container py-4"
       data-aos="fade-up"
@@ -137,6 +140,7 @@ export default {
   vertical-align: top;
   margin: 0 0 15px;
   max-width: 100%;
+  height: 200px
 }
 .imgPrincipale {
     margin-top:-5rem;
