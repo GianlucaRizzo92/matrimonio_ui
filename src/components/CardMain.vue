@@ -66,7 +66,7 @@
           </div>
           <div class="postcard__bar"></div>
           <div class="postcard__preview-txt">
-            C’è un luogo, dove dare il benvenuto ai sogni, ai giorni speciali, agli eventi da ricordare, è un dono da offrire agli occhi, così come al palato della gente. C’è un luogo che racconta di una cucina "semplicata": 'semplice', come i sapori che da sempre ha l’onore di preservare, 'complicata' da descrivere, per chi prima d’ora non l’ha mai incontrata, vissuta, assaporata. C’è un luogo dove, l’incontro tra gusto ed emozioni, crea quell’abbinamento che è perfetto una volta e quella…
+            C’è un luogo, dove dare il benvenuto ai sogni, ai giorni speciali, agli eventi da ricordare, è un dono da offrire agli occhi, così come al palato della gente. C’è un luogo che racconta di una cucina "semplicata": 'semplice', come i sapori che da sempre ha l’onore di preservare, 'complicata' da descrivere, per chi prima d’ora non l’ha mai incontrata, vissuta, assaporata. C’è un luogo dove, l’incontro tra gusto ed emozioni, crea quell’abbinamento che è perfetto una volta e quella soltanto.
           </div>
           <div class="postcard__tagbox">
             <div style="padding: 5px">

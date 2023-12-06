@@ -14,22 +14,22 @@
           <form class="w-100 p-4 text-dark" @submit.prevent="submitForm">
             <label class="d-block mb-4">
               <span class="d-block mb-2 text-black" style="font-family:'Monotype Corsiva', cursive">Nome e Cognome</span>
-              <input name="name" type="text" class="form-control border-secondary bg-transparent text-light" v-model="name" />
+              <input name="name" type="text" class="form-control border-secondary bg-transparent" v-model="name" />
             </label>
             <label class="d-block mb-4">
               <span class="d-block mb-2 text-black" style="font-family:'Monotype Corsiva', cursive">Email</span>
-              <input name="email" type="text" class="form-control border-secondary bg-transparent text-light" v-model="email" />
+              <input name="email" type="text" class="form-control border-secondary bg-transparent" v-model="email" />
             </label>
 
             <label class="d-block mb-4">
               <span class="d-block mb-2 text-black" style="font-family:'Monotype Corsiva', cursive">Numero di ospiti</span>
-              <input name="people" type="number" class="form-control border-secondary bg-transparent text-light"
+              <input name="people" type="number" class="form-control border-secondary bg-transparent"
                 placeholder="1" v-model="people" />
             </label>
 
             <label class="d-block mb-4">
               <span class="d-block mb-2 text-black" style="font-family:'Monotype Corsiva', cursive">Note aggiuntive</span>
-              <textarea name="note" class="form-control border-secondary bg-transparent text-light" rows="3"
+              <textarea name="note" class="form-control border-secondary bg-transparent" rows="3"
                 placeholder="" v-model="note"></textarea>
             </label>
 
@@ -52,6 +52,7 @@
 </template>
 
 <script>
+import Swal from 'sweetalert2';
 import axios from 'axios';
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -86,24 +87,36 @@ export default {
         note: this.note,
       };
 
-    try {
-      const response = await axios.post('https://matrimonio-next.vercel.app/api/form', formData, {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      console.log(response.data);
-    } catch (error) {
-      console.error(error);
-    }
-  }
-},
-    closeModal() {
-      this.modalVisible = false;
-      this.successMessage = '';
-      this.errorMessage = '';
+      try {
+        const response = await axios.post('https://matrimonio-next.vercel.app/api/form', formData, {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+        if (response.data.status && response.data.status === 'success') {
+          Swal.fire({
+            icon: 'success',
+            title: 'Success!',
+            text: 'La partecipazione è stata confermata con successo. Per maggiori info no nesitare a contattarci.',
+          });
+        } else {
+          Swal.fire({
+            icon: 'error',
+            title: 'Error!',
+            text: 'Si è verificato un problema. Se l\'errore persiste non esitare a contattarci',
+          });
+        }
+      } catch (error) {
+        console.error(error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Error!',
+          text: 'Si è verificato un problema. Se l\'errore persiste non esitare a contattarci',
+        });
+      }
     },
   }
+}
 </script>
 
 <style>
