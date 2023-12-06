@@ -248,6 +248,7 @@ a:hover {
     text-align: justify;
     height: 100%;
     font-family:'Monotype Corsiva', cursive;
+    font-size: 18px;
   }
 
   .postcard__tagbox {

@@ -12,22 +12,23 @@
       data-aos-delay="20"
       data-aos-duration="500"
     >
-      <h4 style="font-family:'Monotype Corsiva', cursive;">
+      <h3 style="font-family:'Monotype Corsiva', cursive;">
         Benvenuti nel sito web dedicato al nostro matrimonio! Abbiamo creato
         questo sito come un modo comodo e interattivo per condividere con voi
         tutti i dettagli importanti che precedono il nostro matrimonio. Non
         vediamo l'ora di celebrare insieme a voi questo nuovo entusiasmante
         capitolo della nostra vita...
-      </h4>
+      </h3>
     </div>
 
     <div style="background-color: #f7f7f7;" data-aos="fade-up"
       data-aos-delay="20"
       data-aos-duration="500">
-      <div style="margin-top:2rem; text-align-last: center">
 
+      <div style="margin-top:2rem; text-align-last: center">
         <span style="font-size: 50px; font-family:'Monotype Corsiva', cursive; ">13 luglio 2024</span>
       </div>
+
       <div id="intro" class="text-center">
         <div class="mask">
           <div class="d-flex justify-content-center align-items-center h-100">

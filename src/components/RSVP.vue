@@ -1,35 +1,40 @@
 <template >
   <section class="rsvp">
     <div class="container py-4" data-aos="fade-up" data-aos-delay="20" data-aos-duration="500">
-      <h1 class="h1 text-center">Répondez, s'il vous plaît</h1>
-      <h4 style="text-align: center;" class="h4">(Inserisci qu i dati per confermare la partecipazione)</h4>
+      <div style="margin-top:2rem; text-align-last: center">
+        <span style="font-size: 50px; font-family:'Monotype Corsiva', cursive">Répondez, s'il vous plaît</span>
+      </div>
+      <div style="text-align-last: center">
+        <span style="font-size: 24px; font-family:'Monotype Corsiva', cursive">(Inserisci qui i dati per confermare la partecipazione)</span>
+      </div>
+
       <div class="row mx-0 justify-content-center">
 
         <div class="col-md-7 col-lg-5 px-lg-2 col-xl-4 px-xl-0 card">
           <form class="w-100 p-4 text-dark" @submit.prevent="submitForm">
             <label class="d-block mb-4">
-              <span class="d-block mb-2 text-black">Nome e Cognome</span>
+              <span class="d-block mb-2 text-black" style="font-family:'Monotype Corsiva', cursive">Nome e Cognome</span>
               <input name="name" type="text" class="form-control border-secondary bg-transparent text-light" v-model="name" />
             </label>
             <label class="d-block mb-4">
-              <span class="d-block mb-2 text-black">Email</span>
+              <span class="d-block mb-2 text-black" style="font-family:'Monotype Corsiva', cursive">Email</span>
               <input name="email" type="text" class="form-control border-secondary bg-transparent text-light" v-model="email" />
             </label>
 
             <label class="d-block mb-4">
-              <span class="d-block mb-2 text-black">Numero di ospiti</span>
+              <span class="d-block mb-2 text-black" style="font-family:'Monotype Corsiva', cursive">Numero di ospiti</span>
               <input name="people" type="number" class="form-control border-secondary bg-transparent text-light"
                 placeholder="1" v-model="people" />
             </label>
 
             <label class="d-block mb-4">
-              <span class="d-block mb-2 text-black">Note aggiuntive</span>
+              <span class="d-block mb-2 text-black" style="font-family:'Monotype Corsiva', cursive">Note aggiuntive</span>
               <textarea name="note" class="form-control border-secondary bg-transparent text-light" rows="3"
                 placeholder="" v-model="note"></textarea>
             </label>
 
             <div class="mb-3" style="text-align-last: center;">
-              <button type="submit" class="btn btn-primary px-3" :disabled="isFormDisabled">
+              <button style="font-family:'Monotype Corsiva', cursive" type="submit" class="btn btn-primary px-3" :disabled="isFormDisabled">
                 Invia RSVP
               </button>
             </div>
