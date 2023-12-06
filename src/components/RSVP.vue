@@ -1,25 +1,23 @@
 <template >
   <section class="rsvp">
-    <div class="space" data-aos="fade-up" data-aos-delay="20" data-aos-duration="500">
-      <h1 class="h1 text-center">Répondez, s'il vous plaît</h1>
-      <h4 style="text-align: center;">(Inserisci qu i dati per confermare la partecipazione)</h4>
+    <div class="container py-4" data-aos="fade-up" data-aos-delay="20" data-aos-duration="500">
+      <h1 class="h1 text-center" style="font-family: 'Monotype Corsiva'">Répondez, s'il vous plaît</h1>
+      <h4 style="text-align: center; font-family: 'Monotype Corsiva'">(Inserisci qu i dati per confermare la partecipazione)</h4>
       <div class="row mx-0 justify-content-center">
 
         <div class="col-md-7 col-lg-5 px-lg-2 col-xl-4 px-xl-0 card">
-          <form class="w-100 rounded p-4 text-dark" @submit.prevent="submitForm">
+          <form class="w-100 p-4 text-dark" @submit.prevent="submitForm">
             <label class="d-block mb-4">
-              <span class="d-block mb-2 text-black">Nome</span>
-              <input name="name" type="text" class="form-control border-secondary bg-transparent text-light"
-                placeholder="Nome e Cognome" v-model="name" />
+              <span class="d-block mb-2 text-black">Nome e Cognome</span>
+              <input name="name" type="text" class="form-control border-secondary bg-transparent text-light" v-model="name" />
             </label>
             <label class="d-block mb-4">
               <span class="d-block mb-2 text-black">Email</span>
-              <input name="email" type="text" class="form-control border-secondary bg-transparent text-light"
-                placeholder="Email" v-model="email" />
+              <input name="email" type="text" class="form-control border-secondary bg-transparent text-light" v-model="email" />
             </label>
 
             <label class="d-block mb-4">
-              <span class="d-block mb-2 text-black">Numero di persone</span>
+              <span class="d-block mb-2 text-black">Numero di ospiti</span>
               <input name="people" type="number" class="form-control border-secondary bg-transparent text-light"
                 placeholder="1" v-model="people" />
             </label>
@@ -30,7 +28,7 @@
                 placeholder="" v-model="note"></textarea>
             </label>
 
-            <div class="mb-3">
+            <div class="mb-3" style="text-align-last: center;">
               <button type="submit" class="btn btn-primary px-3" :disabled="isFormDisabled">
                 Invia RSVP
               </button>
@@ -38,6 +36,12 @@
           </form>
         </div>
       </div>
+    </div>
+    <div class="imgPrincipale"
+    data-aos="fade-up"
+      data-aos-delay="20"
+      data-aos-duration="500">
+      <img src="../static/green-flower.png" alt="" class="img-fluid">
     </div>
   </section>
 </template>
@@ -101,6 +105,7 @@ export default {
 body {
   /* padding: 2rem 0; */
   background: #F5EFE8;
+  font-family: 'Monotype Corsiva'
 }
 
 .rsvp {
@@ -113,6 +118,7 @@ body {
 }
 
 .card {
+  border: none;
   flex-wrap: wrap;
   display: flex;
   box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
@@ -121,6 +127,21 @@ body {
   overflow: hidden;
   position: relative;
   color: #18151f;
-  background: linear-gradient(45deg, rgba(189, 20, 11, 0.158), #F5EFE8);
+  background: #F5EFE8;
+}
+.text-dark{
+  font-family: 'Monotype Corsiva'
+}
+.img {
+  border: 0;
+  height: auto;
+  vertical-align: top;
+  margin: 0 0 15px;
+  max-width: 100%;
+}
+.imgPrincipale {
+    margin-top:-5rem;
+    text-align: center;
+    line-height: 20px;
 }
 </style>

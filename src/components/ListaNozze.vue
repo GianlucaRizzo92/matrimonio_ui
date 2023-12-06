@@ -1,9 +1,9 @@
 <template>
   <section class="dark">
     <div class="space">
-      <h1 class="h1 text-center">Lista nozze</h1>
+      <h1 class="h1 text-center" style="font-family: 'Monotype Corsiva'">Lista nozze</h1>
       <br>
-        <h4 style="text-align: center;">Abbiamo la fortuna di avaere già il necessario caccia i soldi</h4>
+        <h4 style="text-align: center; font-family: 'Monotype Corsiva'">Per noi la cosa più importante è condividere insieme il nostro giorno. Nel caso desideriate donarci un ricordo, saremo felici se vorrete contribuire a rendere speciale il nostro viaggio di nozze</h4>
         <br>
       <div class="row mx-0 justify-content-center">
         <div class="row">
@@ -56,7 +56,7 @@
   
   <style>
   .dark {
-    background: #F5EFE8;
+    background: #f1f1f1;
     color: black;
     font-family: 'Monotype Corsiva'
   }

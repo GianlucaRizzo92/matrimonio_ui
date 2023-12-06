@@ -462,28 +462,11 @@ a:hover {
   background: radial-gradient(circle at center, white, transparent 60%);
 }
 
-// .postcard.expanded .postcard__tagbox {
-//   justify-content: flex-start;
-// }
-
 @media screen and (min-width: 769px) {
   .postcard.expanded .postcard__text {
     padding: 3rem;
   }
 }
-
-// .menu-button {
-//   border-radius: 15px;
-//   background-color: transparent;
-//   color: inherit;
-//   font: inherit;
-//   cursor: pointer;
-
-// }
-
-// .menu-button:focus {
-//   outline: none;
-// }
 
 .centered-list {
   text-align-last: center;
