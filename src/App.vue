@@ -5,8 +5,6 @@
 </template>
 
 <script>
-// import MainNavbar from './components/MainNavbar.vue';
-// import CountdownTimer from './components/CountdownTimer.vue';
 import MainPage from './components/MainPage.vue';
  
 export default {
@@ -23,15 +21,15 @@ export default {
   background-color:#f7f7f7
 }
 ::-webkit-scrollbar {
-    width: 7px; /* width of the scrollbar */
+    width: 7px; 
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: grey; /* color of the thumb */
-    border-radius: 6px; /* roundness of the thumb */
+    background-color: grey;
+    border-radius: 6px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #f1f1f1; /* color of the track */
+    background-color: #f1f1f1;
 }
 </style>

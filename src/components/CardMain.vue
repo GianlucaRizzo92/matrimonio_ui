@@ -125,16 +125,6 @@ export default {
       isCardExpanded: false,
     };
   },
-  // mounted() {
-  //   if (!this.isCardExpanded) {
-  //     this.$nextTick(() => {
-  //       AOS.init();
-  //     });
-  //   }
-  // },
-  // destroyed() {
-  //   AOS.destroy();
-  // }
   methods: {
     handleCardExpand() {
       this.isCardExpanded = !this.isCardExpanded;

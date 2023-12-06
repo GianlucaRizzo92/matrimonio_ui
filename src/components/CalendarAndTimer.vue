@@ -73,7 +73,7 @@ export default {
       minutes: 0,
       seconds: 0,
       countdownInterval: null,
-      targetDate: new Date('2024-07-13T18:00:00Z') // Replace with your target date
+      targetDate: new Date('2024-07-13T18:00:00Z')
     };
   },
   mounted() {
