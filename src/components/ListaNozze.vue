@@ -1,16 +1,19 @@
 <template>
   <section class="dark">
     <div class="space">
-      <h1 class="h1 text-center" style="font-family: 'Monotype Corsiva'">Lista nozze</h1>
-      <br>
-        <h4 style="text-align: center; font-family: 'Monotype Corsiva'">Per noi la cosa più importante è condividere insieme il nostro giorno. Nel caso desideriate donarci un ricordo, saremo felici se vorrete contribuire a rendere speciale il nostro viaggio di nozze</h4>
-        <br>
+      <div style="margin-top:2rem; text-align-last: center">
+        <span style="font-size: 50px; font-family:'Monotype Corsiva', cursive">Lista nozze</span>
+      </div>
+
+      <div style="text-align-last: center; padding: 35px">
+        <span style="font-size: 22px; font-family:'Monotype Corsiva', cursive">Per noi la cosa più importante è condividere insieme il nostro giorno. Nel caso desideriate donarci un ricordo, saremo felici se vorrete contribuire a rendere speciale il nostro viaggio di nozze</span>
+      </div>
+
       <div class="row mx-0 justify-content-center">
         <div class="row">
           <div class="col-6">
             <div class="shop-section">
-              <!-- <img src="../static/image1.jpg" alt="Image 1" class="logo-section" /> -->
-              <div class="shop-name">
+              <div class="shop-name" style="font-family:'Monotype Corsiva', cursive">
                 Lista nozze presso:{{ shopName }}
               </div>
             </div>
@@ -18,12 +21,13 @@
           <div class="col-6">
             <div class="divider"></div>
             <div class="logo-section">
-              <!-- <img src="../static/image2.jpg" alt="Image 2" class="logo-section" /> -->
-              <div class="shop-name">
+              <div class="shop-name" style="font-family:'Monotype Corsiva', cursive">
                 Viaggio di nozze
                 <br />
-                IBAN: {{ fakeIBAN }}
-                <b-button variant="primary" size="sm" @click="copyIBAN">Copia</b-button>
+                <div style="font-family:'Monotype Corsiva', cursive">
+                  IBAN: {{ fakeIBAN }}
+                </div>
+                <b-button variant="primary" size="sm" @click="copyIBAN" style="font-family:'Monotype Corsiva', cursive; margin-left: 5px">Copia</b-button>
               </div>
             </div>
           </div>

@@ -2,10 +2,10 @@
   <section class="rsvp">
     <div class="container py-4" data-aos="fade-up" data-aos-delay="20" data-aos-duration="500">
       <div style="margin-top:2rem; text-align-last: center">
-        <span style="font-size: 50px; font-family:'Monotype Corsiva', cursive">Répondez, s'il vous plaît</span>
+        <span style="font-size: 48px; font-family:'Monotype Corsiva', cursive">Répondez, s'il vous plaît</span>
       </div>
       <div style="text-align-last: center">
-        <span style="font-size: 24px; font-family:'Monotype Corsiva', cursive">(Inserisci qui i dati per confermare la partecipazione)</span>
+        <span style="font-size: 22px; font-family:'Monotype Corsiva', cursive">(Inserisci qui i dati per confermare la partecipazione)</span>
       </div>
 
       <div class="row mx-0 justify-content-center">

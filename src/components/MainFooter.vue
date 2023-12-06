@@ -17,7 +17,7 @@
   
   <style>
   .footer {
-    background-color: #ebc79e;
+    background-color: #c4c4c4;
     padding: 2rem;
     margin-bottom: -30px;
   }
