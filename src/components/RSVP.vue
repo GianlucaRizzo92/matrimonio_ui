@@ -1,8 +1,8 @@
 <template >
   <section class="rsvp">
     <div class="container py-4" data-aos="fade-up" data-aos-delay="20" data-aos-duration="500">
-      <h1 class="h1 text-center" style="font-family: 'Monotype Corsiva'">Répondez, s'il vous plaît</h1>
-      <h4 style="text-align: center; font-family: 'Monotype Corsiva'">(Inserisci qu i dati per confermare la partecipazione)</h4>
+      <h1 class="h1 text-center">Répondez, s'il vous plaît</h1>
+      <h4 style="text-align: center;" class="h4">(Inserisci qu i dati per confermare la partecipazione)</h4>
       <div class="row mx-0 justify-content-center">
 
         <div class="col-md-7 col-lg-5 px-lg-2 col-xl-4 px-xl-0 card">
@@ -102,6 +102,12 @@ export default {
 </script>
 
 <style>
+.h1 {
+  font-family: 'Monotype Corsiva'
+}
+.h4 {
+  font-family: 'Monotype Corsiva'
+}
 body {
   /* padding: 2rem 0; */
   background: #F5EFE8;
@@ -127,7 +133,7 @@ body {
   overflow: hidden;
   position: relative;
   color: #18151f;
-  background: #F5EFE8;
+  background: #f1f1f1;
 }
 .text-dark{
   font-family: 'Monotype Corsiva'
