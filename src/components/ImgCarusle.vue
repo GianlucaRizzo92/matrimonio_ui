@@ -5,9 +5,10 @@
       title=" "
       :src="imageUrl"
       alt="Description of the image"
-      :class="{ 'fade-transition': transitioning }"
+      :class="this.transitioning"
       :style="{ objectFit: 'cover', width: '100%', height: '100vh', objectPosition: objectPosition }"
     />
+    <!-- :class="{ 'fade-transition': transitioning }" -->
   </div>
 </template>
 
@@ -29,6 +30,7 @@ export default {
     };
   },
   mounted() {
+    this.preloadImages(); // Preload images
     this.updateImage(); // Set an initial image and object position
 
     // Change the image and object position every 3 seconds
@@ -42,6 +44,12 @@ export default {
     }, 4000);
   },
   methods: {
+    preloadImages() {
+    this.imageConfigs.forEach((config) => {
+      const img = new Image();
+      img.src = config.url;
+    });
+  },
     updateImage() {
       const { url, position } = this.imageConfigs[this.currentImageIndex];
       this.objectPosition = position;
@@ -56,7 +64,6 @@ export default {
   transition: opacity 1s ease-in-out; /* Adjust the duration and easing as needed */
   opacity: 1;
 }
-
 img {
   object-position: 38% center; /* Default value for small screens */
 }
