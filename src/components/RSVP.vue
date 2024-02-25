@@ -28,7 +28,7 @@
             </label>
 
             <label class="d-block mb-4">
-              <span class="d-block mb-2 text-black" style="font-family:'Monotype Corsiva', cursive">Note aggiuntive</span>
+              <span class="d-block mb-2 text-black" style="font-family:'Monotype Corsiva', cursive">Note aggiuntive (intolleranze, ecc..)</span>
               <textarea name="note" class="form-control border-secondary bg-transparent" rows="3"
                 placeholder="" v-model="note"></textarea>
             </label>

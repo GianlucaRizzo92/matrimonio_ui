@@ -21,7 +21,7 @@ export default {
        { url: require('@/static/img5.jpg'), position: '32% center' },
        { url: require('@/static/img2.jpg'), position: '39% center'},
       // { url: require('@/static/img3.jpg'), position: '37% top' }
-      { url: require('@/static/img4.jpg'), position: '45% top' }
+      { url: require('@/static/img4.jpg'), position: '47% center' }
       ],
       currentImageIndex: 0,
       imageUrl: '',
@@ -40,7 +40,7 @@ export default {
         this.currentImageIndex = (this.currentImageIndex + 1) % this.imageConfigs.length;
         this.updateImage();
         this.transitioning = false;
-      }, 1000); // Adjust this delay to match the transition duration
+      }, 1000);
     }, 4000);
   },
   methods: {

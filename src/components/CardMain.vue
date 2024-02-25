@@ -17,7 +17,7 @@
           />
         </a>
         <div class="postcard__text">
-          <h1 class="postcard__title blue">Santuario di Poggio Bustone</h1>
+          <h1 class="postcard__title blue">Convento di San Giacomo</h1>
           <div class="postcard__subtitle small">
             <time datetime="2024-07-13 18:00:00">
               <i class="fas fa-calendar-alt mr-2"></i>Sab, 13 Luglio 2024 ore
@@ -84,27 +84,38 @@
             </div>
           </div>
           <div class="postcard__expanded-text" v-if="isCardExpanded">
-            <h1 class="centered-list">Menù</h1>
+            <!-- <h1 class="centered-list">Menù</h1> -->
             <ul class="centered-list">
               <li>
-                <h3>Antipasto misto</h3>
-                <h6>(Roba varia tipo pizza e riempio la linea)</h6>
+                <h3><b>Cocktails di benvenuto in piazza</b></h3>
+                <!-- <h6>(Angolo del casaro, angolo del contadino e del norcino, angolo delle stuzzicherie al forno, angolo del mare e dei marinati)</h6> -->
               </li>
               <li>
-                <h3>Pasta con i funghi</h3>
-                <h6>(Pasta con i funghi e riempio linea)</h6>
-              </li>
-              <li>
+                <h2><b>Menù a tavola</b></h2>
+                </li>
+                <li>
+                  <h3>Bis di foglia al tartufo e tortellone ai porcini</h3>
+                  <h6>(breve descrizione dei piatti con gli ingredieti)</h6>
+                </li>
+                <li>
+                  <h3>Gnocchetti tricolori alla sabinese fresca</h3>
+                  <h6>(breve descrizione dei piatti con gli ingredieti)</h6>
+
+                </li>
+                <li>
+                  <h3>Scalzato di manzetta prussiana con verdure in tempura e patate al forno</h3>
+                  <h6>(breve descrizione dei piatti con gli ingredieti)</h6>
+
+                </li>
+              <!-- <li>
                 <h3>Gnocchi e guaciale</h3>
                 <h6>(Roba varia tipo e riempio la linea)</h6>
               </li>
               <li>
                 <h3>Pezzo di carne</h3>
-                <h6>(Roba varia tipo e riempio la linea)</h6>
-              </li>
+              </li> -->
               <li>
-                <h3>Dolci e torta</h3>
-                <h6>(Roba varia tipo e riempio la linea)</h6>
+                <h3><b>Buffet di dolci</b></h3>
               </li>
             </ul>
           </div>
