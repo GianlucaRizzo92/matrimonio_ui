@@ -85,37 +85,38 @@
           </div>
           <div class="postcard__expanded-text" v-if="isCardExpanded">
             <!-- <h1 class="centered-list">Menù</h1> -->
+            
             <ul class="centered-list">
+              <h1><b>Menù</b></h1>
+              <br>
               <li>
-                <h3><b>Cocktails di benvenuto in piazza</b></h3>
-                <!-- <h6>(Angolo del casaro, angolo del contadino e del norcino, angolo delle stuzzicherie al forno, angolo del mare e dei marinati)</h6> -->
+                <h4><b>COCKTAIL DI BENVENUTO IN PIAZZA</b></h4>
+                <h5>Angolo del Casaro, Angolo del Norcino, Angolo del Mare e Show Cooking</h5>
               </li>
               <li>
-                <h2><b>Menù a tavola</b></h2>
                 </li>
+                <br>
                 <li>
-                  <h3>Bis di foglia al tartufo e tortellone ai porcini</h3>
-                  <h6>(breve descrizione dei piatti con gli ingredieti)</h6>
+                  <h4><b>PRIMO</b></h4>
+                  <h5>Foglia al tartufo con taleggio</h5>
+                  <h5>Tortelloni ripieni di porcini</h5>
+                  <h5>Gnocchetti tricolore con pomodori datterino, olive taggiasche e guanciale croccante</h5>
                 </li>
-                <li>
-                  <h3>Gnocchetti tricolori alla sabinese fresca</h3>
-                  <h6>(breve descrizione dei piatti con gli ingredieti)</h6>
+                <br>
 
-                </li>
                 <li>
-                  <h3>Scalzato di manzetta prussiana con verdure in tempura e patate al forno</h3>
-                  <h6>(breve descrizione dei piatti con gli ingredieti)</h6>
-
+                  <h4><b>SECONDO</b></h4>
+                  <h5>Scalzato di Manzetta Prussiana con verdure in tempura e patate al forno</h5>
                 </li>
-              <!-- <li>
-                <h3>Gnocchi e guaciale</h3>
-                <h6>(Roba varia tipo e riempio la linea)</h6>
+                <br>
+              <li>
+                <h4><b>VINI</b></h4>
+                <h5>Selezione Colle Aluffi</h5>
               </li>
+              <br>
               <li>
-                <h3>Pezzo di carne</h3>
-              </li> -->
-              <li>
-                <h3><b>Buffet di dolci</b></h3>
+                <h4><b>DESSERT</b></h4>
+                <h5>Torta Nuziale al buffet di dolci e frutta</h5>
               </li>
             </ul>
           </div>
@@ -340,8 +341,8 @@ a:hover {
     }
 
     &:nth-child(2n + 1) .postcard__text::before {
-      left: -25px !important;
-      transform: rotate(4deg);
+      left: -28px !important;
+      transform: rotate(3deg);
     }
 
     &:nth-child(2n + 0) .postcard__text::before {

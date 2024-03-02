@@ -6,8 +6,8 @@
             <i class="fas fa-phone"></i>
             <div class="info-text">
               <span>Contatti</span>
-              <div class="phone-number">Tel: 3275924833</div>
-              <div class="email">Email: gianlucarizz@gmail.com</div>
+              <div class="text"><b>Gianluca Rizzo</b>, Tel: 3275924833, Email: gianlucarizz@gmail.com</div>
+              <div class="text"><b>Anna Antoniozzi</b>, Tel: 3475995983, Email: anna1995.aa@gmail.com</div>
             </div>
           </div>
         </div>
