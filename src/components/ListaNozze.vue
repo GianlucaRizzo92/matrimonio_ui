@@ -41,8 +41,8 @@
   export default {
     data() {
       return {
-        shopName: ' Giancarli, Viale Lionello Matteucci, 1, 02100 Rieti RI',
-        fakeIBAN: 'XX12 3456 7890 1234 5678 90',
+        shopName: 'Agorà Gioielleria, Via Cintia, 97 – 02100 Rieti 02100 Rieti RI',
+        fakeIBAN: 'IT85O0200814608000102566974',
       };
     },
     methods: {
