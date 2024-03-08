@@ -24,7 +24,7 @@
             <label class="d-block mb-4">
               <span class="d-block mb-2 text-black" style="font-family:'Monotype Corsiva', cursive">Numero di ospiti</span>
               <input name="people" type="number" class="form-control border-secondary bg-transparent"
-                placeholder="1" v-model="people" />
+                placeholder="0" v-model="people" />
             </label>
 
             <label class="d-block mb-4">
@@ -76,7 +76,8 @@ export default {
   },
   computed: {
     isFormDisabled() {
-      return this.name === '' || this.email === '' || this.people === 0;
+      console.log(this.people)
+      return this.name === '' || this.email === '' || this.people === null;
     },
   },
   methods: {
