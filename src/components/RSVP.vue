@@ -14,11 +14,11 @@
           <form class="w-100 p-4 text-dark" @submit.prevent="submitForm">
             <label class="d-block mb-4">
               <span class="d-block mb-2 text-black" style="font-family:'Monotype Corsiva', cursive">Nome e Cognome</span>
-              <input name="name" type="text" class="form-control border-secondary bg-transparent" v-model="name" />
+              <input name="name" type="name" class="form-control border-secondary bg-transparent" v-model="name" />
             </label>
             <label class="d-block mb-4">
               <span class="d-block mb-2 text-black" style="font-family:'Monotype Corsiva', cursive">Email</span>
-              <input name="email" type="text" class="form-control border-secondary bg-transparent" v-model="email" />
+              <input name="email" type="email" class="form-control border-secondary bg-transparent" v-model="email" />
             </label>
 
             <label class="d-block mb-4">
@@ -76,7 +76,6 @@ export default {
   },
   computed: {
     isFormDisabled() {
-      console.log(this.people)
       return this.name === '' || this.email === '' || this.people === null;
     },
   },
