@@ -3,12 +3,11 @@
     <img
       class="d-block img-fluid"
       title=" "
-      :src="imageUrl"
-      alt="Description of the image"
+      :src="getImageUrl()"
+      alt="Gianluca&AnnaSposi"
       :class="this.transitioning"
       :style="{ objectFit: 'cover', width: '100%', height: '100vh', objectPosition: objectPosition }"
     />
-    <!-- :class="{ 'fade-transition': transitioning }" -->
   </div>
 </template>
 
@@ -17,10 +16,8 @@ export default {
   data() {
     return {
       imageConfigs: [
-      // { url: require('@/static/img1.jpg'), position: '46.5% center' },
        { url: require('@/static/img5.jpg'), position: '32% center' },
        { url: require('@/static/img2.jpg'), position: '39% center'},
-      // { url: require('@/static/img3.jpg'), position: '37% top' }
       { url: require('@/static/img4.jpg'), position: '47% center' }
       ],
       currentImageIndex: 0,
@@ -30,10 +27,9 @@ export default {
     };
   },
   mounted() {
-    this.preloadImages(); // Preload images
-    this.updateImage(); // Set an initial image and object position
+    this.preloadImages();
+    this.updateImage();
 
-    // Change the image and object position every 3 seconds
     setInterval(() => {
       this.transitioning = true;
       setTimeout(() => {
@@ -44,6 +40,9 @@ export default {
     }, 4000);
   },
   methods: {
+    getImageUrl() {
+    return this.imageUrl;
+  },
     preloadImages() {
     this.imageConfigs.forEach((config) => {
       const img = new Image();
@@ -61,16 +60,16 @@ export default {
 
 <style scoped>
 .fade-transition {
-  transition: opacity 1s ease-in-out; /* Adjust the duration and easing as needed */
+  transition: opacity 1s ease-in-out;
   opacity: 1;
 }
 img {
-  object-position: 38% center; /* Default value for small screens */
+  object-position: 38% center;
 }
 
 @media only screen and (max-width: 767px) {
   img {
-    object-position: 38% center; /* Default value for small screens */
+    object-position: 38% center;
   }
 }
 </style>
