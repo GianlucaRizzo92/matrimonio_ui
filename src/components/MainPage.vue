@@ -8,9 +8,9 @@
         <Lista-Nozze id="lista-nozze"/>
         <Main-Footer/>
         <div v-if="loading" class="loading-overlay">
-    <!-- Add your loading spinner or message here -->
-    Loading...
-  </div>
+          <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+          </div>
+        </div>
     </div>
 </template>
 
