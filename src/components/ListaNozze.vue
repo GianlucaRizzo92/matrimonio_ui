@@ -41,7 +41,7 @@
   export default {
     data() {
       return {
-        shopName: 'Agorà Gioielleria, Via Cintia, 97 – 02100 Rieti 02100 Rieti RI',
+        shopName: 'Agorà Gioielleria, Via Cintia, 97 - 02100 Rieti RI',
         fakeIBAN: 'IT85O0200814608000102566974',
       };
     },
