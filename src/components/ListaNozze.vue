@@ -25,7 +25,7 @@
                 Viaggio di nozze
                 <br />
                 <div style="font-family:'Monotype Corsiva', cursive">
-                  IBAN: {{ fakeIBAN }}
+                  IBAN: {{ formattedIBAN }}
                 </div>
                 <b-button variant="primary" size="sm" @click="copyIBAN" style="font-family:'Monotype Corsiva', cursive; margin-left: 5px">Copia</b-button>
               </div>
@@ -38,6 +38,7 @@
 </template>
   
   <script>
+  import Swal from 'sweetalert2';
   export default {
     data() {
       return {
@@ -45,16 +46,28 @@
         fakeIBAN: 'IT85O0200814608000102566974',
       };
     },
+    computed: {
+      formattedIBAN() {
+      return this.fakeIBAN.match(/.{1,4}/g).join(' ');
+    },
+    },
     methods: {
       copyIBAN() {
-        const el = document.createElement('textarea');
-        el.value = this.fakeIBAN;
-        document.body.appendChild(el);
-        el.select();
-        document.execCommand('copy');
-        document.body.removeChild(el);
-      },
-    },
+      const el = document.createElement('textarea');
+      el.value = this.fakeIBAN;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+
+      // Display a confirmation message using Swal.fire
+      Swal.fire({
+        icon: 'success',
+        title: 'IBAN Copiato!',
+        text: 'IBAN copiato negli appunti',
+      });
+    }
+    }
   };
   </script>
   
