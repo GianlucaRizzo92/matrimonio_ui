@@ -25,6 +25,9 @@
                 Viaggio di nozze
                 <br />
                 <div style="font-family:'Monotype Corsiva', cursive">
+                  Intestato a Gianluca Rizzo
+                </div>
+                <div style="font-family:'Monotype Corsiva', cursive">
                   IBAN: {{ formattedIBAN }}
                 </div>
                 <b-button variant="primary" size="sm" @click="copyIBAN" style="font-family:'Monotype Corsiva', cursive; margin-left: 5px">Copia</b-button>
