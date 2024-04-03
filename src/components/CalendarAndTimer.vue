@@ -73,7 +73,7 @@ export default {
       minutes: 0,
       seconds: 0,
       countdownInterval: null,
-      targetDate: new Date('2024-07-13T18:00:00Z')
+      targetDate: new Date('2024-07-13T16:00:00Z')
     };
   },
   mounted() {
@@ -84,7 +84,6 @@ export default {
       this.countdownInterval = setInterval(() => {
         const now = new Date().getTime();
         const distance = this.targetDate - now;
-
         this.days = Math.floor(distance / (1000 * 60 * 60 * 24));
         this.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
